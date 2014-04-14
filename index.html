@@ -1,84 +1,154 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Personalized Course Reporting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-     <link href="starter-template.css" rel="stylesheet">
-  </head>
-  
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Personalized Course Reporting System</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="howitworks.html">How it Works</a></li>
-            <li><a href="whyshouldiuseit.html">Why Should I Use It</a></li>
-			<li><a href="whatitlookslike.html">What It Looks Like</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
-    <div class="container">
-
-		<div class="starter-template">
-        <h1>Georgia Tech Personalized Course Reporting</h1>
-		<iframe width="640" height="360" src="//www.youtube.com/embed/WXnvFuqkFzY" frameborder="0" allowfullscreen></iframe>
-		<div class="jumbotron">
-			<h1>Overview</h1>
-			<p>To support Georgia Tech’s goal to provide a more flexible and individualized degree program for students, 
-			we propose implementing an intelligent registration-aid system. This system will cluster similar students 
-			based on their strengths, interests, and career paths in order to provide a personalized review of potential 
-			courses and professors. Information concerning course difficulty, interest of each course to students, and 
-			usefulness of courses to intended career paths will be analyzed and presented to students based on the 
-			statistics for past students of the same group. This process will empower students to effectively and 
-			confidently choose courses and build their own degree.</p>
-		</div>
-      </div>
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h1>The Problem</h1>
-			</div>
-			<div class="panel-body">
-				<br>
-				<p class="lead">    The registration process is not an integrated experience. When students want to compare professors, they might 
-				use Rate My Professors. For a more general course evaluation, they may turn to Course Critique. Additionally, 
-				students may solicit the advice of friends that, to the best of their knowledge, have relevant experience. Students 
-				waste time painstakingly integrating information from these disparate sources. Furthermore, when students find that 
-				the courses they selected do not meet their expectations, they may be forced to drop courses, postpone graduation, 
-				or worse. Students are familiar with the experience of being recommended some course because it is an “easy A,” 
-				“very engaging,” or “pertinent to my major,” but after registering for said course, their experience is starkly 
-				different from their expectations. </p>
-				
-				<p class="lead">    These expectations so frequently diverge from reality because many different kinds of students exist. Students 
-				have different strengths and weaknesses, and they often forget this fact when giving opinions about courses to other 
-				students. Differences in student experiences span majors, age groups, interests, and a myriad of other possible variables. 
-				Discussion among students regarding class selection is carried out in ignorance of these differences. There is no way
-				for a student to know if the advice they give or receive about class expectations is applicable. </p>
-
-				<p class="lead">    There exists no single resource with which students might acquire the necessary information to select classes that 
-				are interesting, manageable, and applicable to the students’ individual goals. Georgia Tech wishes to provide its students 
-				with a “flexible and individualized degree program,” but difficulties in registration make it challenging for students 
-				to plan a path to graduation through courses that they need, want, and can manage. Georgia Tech already collects some 
-				relevant information regarding student reactions to classes in the form of the CIOS process but this information is not 
-				available to students. Students need a way to make confident decisions during registration with information relevant to them. </p>
-				<br>
-			</div>
-		</div>
-    </div>
-    <script src="//code.jquery.com/jquery.js"></script>
+    <link href="starter-template.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="js/jquery.localScroll.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  </body>
+</head>
+
+<body>
+    <div id="navlinks" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="index.html">Personalized Course Reporting System</a>-->
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#top">Personalized Course Rating System</a></li>
+                    <li><a href="#theproblem">The Problem</a></li>
+                    <li><a href="#howitworks">How it Works</a></li>
+                    <li><a href="#whyshouldiuseit">Why Should I Use It</a></li>
+                    <li><a href="#whatitlookslike">What It Looks Like</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div id="top" class="container">
+
+        <div class="starter-template">
+            <h1>Georgia Tech Personalized Course Reporting</h1>
+            <!--<iframe width="640" height="360" src="//www.youtube.com/embed/WXnvFuqkFzY" frameborder="0" allowfullscreen></iframe>-->
+            <div class="jumbotron">
+                <h1>Overview</h1>
+                <p>
+                    To support Georgia Tech’s goal to provide a more flexible and individualized degree program for students,
+                    we propose implementing an intelligent registration-aid system. This system will cluster similar students
+                    based on their strengths, interests, and career paths in order to provide a personalized review of potential
+                    courses and professors. Information concerning course difficulty, interest of each course to students, and
+                    usefulness of courses to intended career paths will be analyzed and presented to students based on the
+                    statistics for past students of the same group. This process will empower students to effectively and
+                    confidently choose courses and build their own degree.
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div id="theproblem" class="panel-heading">
+                <h1>The Problem</h1>
+            </div>
+            <div class="panel-body">
+                <br>
+                <p class="lead">
+                    The registration process is not an integrated experience. When students want to compare professors, they might
+                    use Rate My Professors. For a more general course evaluation, they may turn to Course Critique. Additionally,
+                    students may solicit the advice of friends that, to the best of their knowledge, have relevant experience. Students
+                    waste time painstakingly integrating information from these disparate sources. Furthermore, when students find that
+                    the courses they selected do not meet their expectations, they may be forced to drop courses, postpone graduation,
+                    or worse. Students are familiar with the experience of being recommended some course because it is an “easy A,”
+                    “very engaging,” or “pertinent to my major,” but after registering for said course, their experience is starkly
+                    different from their expectations.
+                </p>
+
+                <p class="lead">
+                    These expectations so frequently diverge from reality because many different kinds of students exist. Students
+                    have different strengths and weaknesses, and they often forget this fact when giving opinions about courses to other
+                    students. Differences in student experiences span majors, age groups, interests, and a myriad of other possible variables.
+                    Discussion among students regarding class selection is carried out in ignorance of these differences. There is no way
+                    for a student to know if the advice they give or receive about class expectations is applicable.
+                </p>
+
+                <p class="lead">
+                    There exists no single resource with which students might acquire the necessary information to select classes that
+                    are interesting, manageable, and applicable to the students’ individual goals. Georgia Tech wishes to provide its students
+                    with a “flexible and individualized degree program,” but difficulties in registration make it challenging for students
+                    to plan a path to graduation through courses that they need, want, and can manage. Georgia Tech already collects some
+                    relevant information regarding student reactions to classes in the form of the CIOS process but this information is not
+                    available to students. Students need a way to make confident decisions during registration with information relevant to them.
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div id="howitworks" class="container">
+
+        <div class="starter-template">
+            <h1>How It Works</h1>
+            <p class="lead">
+                This page will explain how this system works to the student. We will go as in­depth as
+                possible, providing as much detail about the system as we can. If prospective users understand how the system works, they will be better able to understand how it can benefit them, and they will be more inclined to use it, and encourage their friends to use it.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="whyshouldiuseit" class="container">
+
+        <div class="starter-template">
+            <h1>Why Should I Use It?</h1>
+            <p class="lead">
+                This page will clearly state the benefits that the system will bring.  Students will have
+                another resource to use during registration time--one that is tailored to their needs. Some sort of
+                graphic here would be desirable. A table comparing the rating system against other registration
+                aids is one possibility. Another is just a list of features that our rating system would provide.
+            </p>
+        </div>
+
+    </div>
+
+    <div id="whatitlookslike" class="container">
+
+        <div class="starter-template">
+            <h1>What It Looks Like</h1>
+            <p class="lead">
+                Since the system is not actually in place, the website will have some sort of
+                mock­up or simulation of the rating system.  Some sort of visualization, optionally one that is
+                interactive, that the  viewer can see and glean some concrete understanding of the workings and
+                use of the system.  By providing the viewer with this, they would be able to directly see how to use
+                the system.
+            </p>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        // When the document is loaded...
+        $(document).ready(function () {
+
+            var navheight = $('#navlinks').height();
+
+            $('#navlinks').localScroll({
+                duration: 800,
+                offset: -navheight
+            });
+
+            $('.nav li a').on('click', function (e) {
+                $(this).closest('ul').find('li.active').removeClass('active');
+                $(this).closest('li').addClass('active');
+            });
+        });
+    </script>
+</body>
 </html>
