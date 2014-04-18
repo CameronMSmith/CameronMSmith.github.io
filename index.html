@@ -13,6 +13,11 @@
     <script type="text/javascript">
         function fakesubmit() {
 
+            if ($('#exampleInputEmail1').val().trim().length == 0 || $('#messageTextBox').val().trim().length == 0) {
+                alert("Please fill out the form before submitting.");
+                return false;
+            }
+
             alert("Thank you for your interest!");
 
             $('#exampleInputEmail1').val('');
