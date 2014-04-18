@@ -10,6 +10,18 @@
     <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="js/jquery.localScroll.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function fakesubmit() {
+
+            alert("Thank you for your interest!");
+
+            $('#exampleInputEmail1').val('');
+            $('#messageTextBox').val('');
+            $('#mailingList').removeAttr('checked');
+
+            return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -171,10 +183,10 @@
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox"> Please add me to the mailing list.
+                        <input id="mailingList" type="checkbox"> Please add me to the mailing list.
                     </label>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default" onclick="return fakesubmit();">Submit</button>
             </form>
 
         </div>
